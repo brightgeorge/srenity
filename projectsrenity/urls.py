@@ -17,8 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 import myapp.userurls
+import branch12app.b12userurls
+import branch13app.b13userurls
+import branch14app.b14userurls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(myapp.userurls)),
+    path('br12/', include(branch12app.b12userurls)),
+    path('br13/', include(branch13app.b13userurls)),
+    path('br14/', include(branch14app.b14userurls)),
 ]
